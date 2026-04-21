@@ -1,4 +1,4 @@
-function intToRoman(num) {
+function intToRoman(number) {
     const map = [
         ["M", 1000],
         ["CM", 900],
@@ -16,9 +16,9 @@ function intToRoman(num) {
     ];
     let result = "";
     for (const [symbol, value] of map) {
-        while (num >= value) {
+        while (number >= value) {
             result += symbol;
-            num -= value;
+            number -= value;
         }
     }
     return result;
